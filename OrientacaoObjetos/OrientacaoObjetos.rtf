@@ -57,5 +57,26 @@ Os tr\'eas tipos de envio de m\'e9todo s\'e3o:\par
 \par
 Classes e ponteiros\b0\par
 \tab Toda classe (e, portanto, todo componente) \'e9 realmente um ponteiro. O compilador automaticamente dereferencia os ponteiros de classe para voc\'ea, ent\'e3o na maioria das vezes voc\'ea n\'e3o precisa pensar sobre isso. O status das classes como ponteiros se torna importante quando voc\'ea passa uma classe como um par\'e2metro. Em geral, voc\'ea deve passar classes por valor e n\'e3o por refer\'eancia. A raz\'e3o \'e9 que as classes j\'e1 s\'e3o ponteiros, que s\'e3o refer\'eancias; passando uma classe por valores de refer\'eancia para passar uma refer\'eancia a uma refer\'eancia.\par
+\par
+\b As partes b\'e1sicas de um programa orientado a objeto\par
+\b0 - o bloco de constru\'e7\'e3o b\'e1sico de um programa OO \'e9 uma classe.\par
+- ele define os campos e metodos\par
+\tab OO introduziu maneiras mais simples de permitir que os campos fossem vistos externamento \'e0 classe - via PROPERTIES. \par
+\tab Mas uma classe \'e9 apenas um conjunto de campos, propriedades e metodos. \par
+\tab Criar uma instancia de uma classe \'e9 chamado de instancia\'e7\'e3o e gera um objeto. Cada instancia de uma classe \'e9 um objeto separado.\par
+type\par
+\tab TSimple = class(TObject)\par
+\tab\tab simpleCount : Byte;\par
+\tab\tab property count : Byte read simpleCount;\par
+\tab\tab procedure SetCount(count : Byte);\par
+       \tab end;\par
+\b Sobrecarca de m\'e9todos\par
+\tab\b0 O mesmo nome pode ser usado para essa rotina. O delphi decide qual rotina chamar pelo numero e tipo de parametros.\par
+\b Polimorfismo\par
+\tab\b0\'c9 definido como a capacidade de objetos relacionados, mas diferentes, de implementar o m\'e9todo a sua maneira. Ex: em um aplicativo grafico, podemos ter objetos de circulo, quadrado e triangulo, cada um dos quais poderia ter um metodo Draw. Isso seria o mesmo para o chamador, mas cada objeto seria desenhado de uma maneira diferente.\par
+\b Abstra\'e7\'e3o \b0\par
+\tab Parte fundamental do OO, mesmo que poucas pessoas o usem. Abstra\'e7\'e3o \'e9 quando uma classe define m\'e9todos como esqueletos. N\'e3o fornece o c\'f3digo para execut\'e1-los. Insiste que as classes herdadas a fa\'e7am. A id\'e9ia \'e9 que a classe pai esclare\'e7a para subclasses exatamente quais m\'e9todos eles precisam fornecer para consistencia. \par
+\b Interface\par
+\tab\b0 S\'e3o ainda menos usadas que a abstra\'e7\'e3o. Eles s\'e3o uma forma especializada de abstra\'e7\'e3o. Uma defini\'e7\'e3o de interface compreende apenas m\'e9todos abstratos. Qualquer classe que implemente uma interface deve implementar esses m\'e9todos abstratos. Uma classe pode implementar mais de uma interface. \b\par
 }
  
