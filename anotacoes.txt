@@ -1,0 +1,2 @@
+viacep.com.br/ws/xxxxxxxx/json
+xxxxx é ocep
